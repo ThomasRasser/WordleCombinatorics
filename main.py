@@ -3,6 +3,7 @@ import os
 import datetime
 
 from get_dict import get_dict
+from find_solution import find_solution
 #endregion
 
 
@@ -18,6 +19,10 @@ if __name__ == "__main__":
     #region Load words and setup word_dict
     words_dict = get_dict(True)
     words_set = set(words_dict.keys())
+    #endregion
+
+    #region Add possible word-combinations to word_dict
+    find_solution(words_dict, words_set, False)
     #endregion
 
     end_time = datetime.datetime.now()
